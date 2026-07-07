@@ -37,7 +37,7 @@ export interface CartItem {
 
 export interface SummaryItem extends CartItem {
   product: Product;
-  variant: CameraVariant | null;
+  variant: CameraVariant | undefined;
   totalPrice: number;
   compareAtPrice: number;
 }

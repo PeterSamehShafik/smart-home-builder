@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 import { useCheckoutStore } from "@/stores/checkoutStore";
-import type { Product, SummaryItem } from "@/types/api.types";
+import type { CameraVariant, Product, SummaryItem } from "@/types/api.types";
 
 export function useCheckoutSummary(products: Product[]) {
   const cart = useCheckoutStore((state) => state.cart);
@@ -23,7 +23,7 @@ export function useCheckoutSummary(products: Product[]) {
 
       let unitPrice = 0;
       let unitCompareAt = 0;
-      let variant = null;
+      let variant: CameraVariant | undefined = undefined;
 
       if (product.category === "cameras") {
         variant = product.variants.find((v) => v.id === item.variantId);
