@@ -2,8 +2,6 @@
 
 A multi-step, data-driven bundle builder for a home-security system, with a live review panel and a persisted cart — built as a frontend take-home.
 
-Design reference: [Figma](https://www.figma.com/design/JYf61etQVqeseX7oY5alGz/Frontend-Test-Figma?node-id=68-8088&t=eItHIh0U1JjjJF8d-1)
-
 ## Tech stack
 
 - **React + TypeScript** (Vite)
@@ -41,12 +39,23 @@ The builder walks the shopper through a 4-step accordion (Cameras → Plan → S
 - Node 18+
 - npm
 
+
 ### 1. Clone
 
 ```bash
 git clone https://github.com/PeterSamehShafik/smart-home-builder.git
 cd smart-home-builder
 ```
+
+### Quick Start (Optional)
+
+For convenience, you can use one of the provided launcher scripts instead of running the commands manually:
+
+- **Windows:** `start-windows.bat`
+- **macOS:** `start-macos.command`
+
+These scripts simply automate the steps described below (install dependencies, start the backend and frontend, and open the application in your browser). They're plain text files, so you can open and inspect their contents before running them if you'd like.
+
 
 ### 2. Backend (bonus API)
 
