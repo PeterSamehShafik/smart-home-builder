@@ -1,0 +1,22 @@
+[
+  {
+    "id": "wyze_sense_motion",
+    "category": "sensors",
+    "title": "Wyze Sense Motion Sensor",
+    "description": "Detects motion up to 30 feet away with a 120° field of view.",
+    "badge": null,
+    "mainImage": "/assets/products/sense-motion.png",
+    "price": 19.98,
+    "compareAt": null
+  },
+  {
+    "id": "wyze_sense_hub",
+    "category": "sensors",
+    "title": "Wyze Sense Hub (Required)",
+    "description": "The brain of your security system. Connects all sensors to your network.",
+    "badge": "Required",
+    "mainImage": "/assets/products/sense-hub.png",
+    "price": 0,
+    "compareAt": 29.92
+  }
+]
