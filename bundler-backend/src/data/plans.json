@@ -1,0 +1,32 @@
+[
+  {
+    "id": "cam_basic_plan",
+    "category": "plan",
+    "title": "Cam Basic",
+    "description": "Essential monitoring with standard motion notifications for a single camera.",
+    "badge": null,
+    "mainImage": "/assets/products/plan.png",
+    "price": 3.99,
+    "compareAt": 4.99
+  },
+  {
+    "id": "cam_unlimited_plan",
+    "category": "plan",
+    "title": "Cam Unlimited",
+    "description": "Unlock smart AI detection and unlimited cloud storage for all cameras.",
+    "badge": "Popular",
+    "mainImage": "/assets/products/plan.png",
+    "price": 9.99,
+    "compareAt": 12.99
+  },
+  {
+    "id": "cam_pro_plus_plan",
+    "category": "plan",
+    "title": "Cam Pro Plus",
+    "description": "Advanced AI features, professional 24/7 monitoring, and 30-day cloud history for up to 5 cameras.",
+    "badge": "Best Value",
+    "mainImage": "/assets/products/plan.png",
+    "price": 19.99,
+    "compareAt": 24.99
+  }
+]
