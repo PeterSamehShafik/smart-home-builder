@@ -10,7 +10,6 @@ export function useCheckoutSummary(products: Product[]) {
     let subtotal = 0;
     let compareAtSubtotal = 0;
 
-    // Define a clear structure for categorized items
     const categorizedItems: Record<string, SummaryItem[]> = {
       cameras: [],
       sensors: [],
@@ -26,7 +25,6 @@ export function useCheckoutSummary(products: Product[]) {
       let unitCompareAt = 0;
       let variant = null;
 
-      // Logic refinement: Cameras are the only ones with a variants array
       if (product.category === "cameras") {
         variant = product.variants.find((v) => v.id === item.variantId);
         if (!variant) return;
@@ -48,7 +46,6 @@ export function useCheckoutSummary(products: Product[]) {
       subtotal += itemTotalPrice;
       compareAtSubtotal += itemCompareAtPrice;
 
-      // Ensure the category key exists before pushing
       if (categorizedItems[product.category]) {
         categorizedItems[product.category].push({
           ...item,

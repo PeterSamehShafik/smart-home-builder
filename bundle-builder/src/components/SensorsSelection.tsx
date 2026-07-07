@@ -19,7 +19,6 @@ export function SensorsGrid() {
     <div className="w-full space-y-4">
       <div className="flex flex-wrap gap-3 justify-start w-full">
         {sensors.map((product) => {
-          // Use product.id as the key since there are no variants
           const currentQty = cart[product.id]?.quantity || 0;
           return (
             <ProductCard

@@ -27,7 +27,7 @@ export function ProductCard({
   onVariantChange,
   onQuantityChange,
 }: ProductCardProps) {
-  // Logic to show variants ONLY if it's a camera and has > 1 variant
+  // show variants ONLY if it's a camera and has > 1 variant
   const showVariants =
     product.category === "cameras" && product.variants.length > 1;
 
@@ -70,7 +70,6 @@ export function ProductCard({
           </p>
         </div>
 
-        {/* Variant Picker (Rendered conditionally) */}
         {showVariants && (
           <div className="flex flex-wrap gap-1 my-1 ">
             {product.variants.map((v) => (

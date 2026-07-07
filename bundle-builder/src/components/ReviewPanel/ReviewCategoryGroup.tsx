@@ -17,7 +17,6 @@ export default function ReviewCategoryGroup({
   items,
   onQuantityChange,
 }: ReviewCategoryGroupProps) {
-  // If no products are added for this specific group, don't render the section heading
   if (items.length === 0) return null;
 
   return (
@@ -27,7 +26,6 @@ export default function ReviewCategoryGroup({
       </h4>
       <div className="space-y-3">
         {items.map((item) => {
-          // Safely fallback to the main image if variant is null
           const displayImage =
             item.category === "cameras"
               ? item.variant?.heroImage || item.variant?.thumbnailImage
@@ -62,7 +60,6 @@ export default function ReviewCategoryGroup({
                       {item.product.title}
                     </span>
                   )}
-                  {/* Safely render the variant label ONLY if the variant exists */}
                   {!isPlan && item.variant && (
                     <span className="text-xs text-brand-textMuted leading-none mt-0.5">
                       Variant: {item.variant.label}
@@ -102,7 +99,6 @@ export default function ReviewCategoryGroup({
                     </span>
                   )}
 
-                  {/* Current price always shows */}
                   <span className="font-bold text-brand-primary">
                     {item.totalPrice === 0 ? (
                       <>FREE</>

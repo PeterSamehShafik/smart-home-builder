@@ -25,6 +25,7 @@ export function ReviewPanel({ allProducts }: ReviewPanelProps) {
       <span className="text-brand-textMuted text-xs  absolute top-2 left-5">
         REVIEW
       </span>
+
       <div className="mt-2 ">
         <h2 className="text-xl font-bold text-brand-textMain">
           Your security system
@@ -43,35 +44,30 @@ export function ReviewPanel({ allProducts }: ReviewPanelProps) {
           </div>
         ) : (
           <div className="mt-6 space-y-6">
-            {/* 1. CAMERAS CATEGORY GROUP SECTION */}
             <ReviewCategoryGroup
               title="Cameras"
               items={categorizedItems.cameras}
               onQuantityChange={updateQuantity}
             />
 
-            {/* 2. SENSORS CATEGORY GROUP SECTION */}
             <ReviewCategoryGroup
               title="Sensors"
               items={categorizedItems.sensors}
               onQuantityChange={updateQuantity}
             />
 
-            {/* 3. ACCESSORIES CATEGORY GROUP SECTION */}
             <ReviewCategoryGroup
               title="Accessories"
               items={categorizedItems.accessories}
               onQuantityChange={updateQuantity}
             />
 
-            {/* 4. PLANS / SUBSCRIPTIONS CATEGORY GROUP SECTION */}
             <ReviewCategoryGroup
               title="Home Monitoring Plan"
               items={categorizedItems.plan}
               onQuantityChange={updateQuantity}
             />
 
-            {/* Shipping Line-item block remains static status view */}
             <div className="flex justify-between  border-t border-brand-border pt-3">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 bg-brand-surface rounded shrink-0 p-1 flex items-center justify-center">
@@ -92,12 +88,9 @@ export function ReviewPanel({ allProducts }: ReviewPanelProps) {
         )}
       </div>
 
-      {/* Summary Calculations Footer Panel section */}
       {totalItems > 0 && (
         <div className="mt-3 pt-3 border-t border-brand-border space-y-4 w-auto md:w-xl xl:w-auto px-0 md:px-8 xl:px-0">
-          {/* Pricing Header: Responsive Container */}
           <div className="flex flex-row md:flex-col xl:flex-row items-center md:items-start xl:items-center justify-between gap-4 ">
-            {/* Badge + Text Section */}
             <div className="flex items-center gap-4">
               <div className="shrink-0">
                 <img
@@ -107,7 +100,6 @@ export function ReviewPanel({ allProducts }: ReviewPanelProps) {
                 />
               </div>
 
-              {/* This Text Block Only Shows on MD/LG screens */}
               <div className="hidden md:block xl:hidden ">
                 <h4 className="font-bold text-lg text-brand-textMain">
                   30-day hassle-free returns
@@ -119,14 +111,11 @@ export function ReviewPanel({ allProducts }: ReviewPanelProps) {
               </div>
             </div>
 
-            {/* Pricing Column */}
             <div className="text-right block md:flex xl:block w-full  justify-between items-center">
-              {/* Monthly Financing Badge */}
               <span className="inline-block bg-brand-primary text-white text-xs px-2 py-0.5 rounded uppercase tracking-wide mb-1">
                 as low as ${(subtotal / 12).toFixed(2)}/mo
               </span>
 
-              {/* Main Price Row */}
               <div className="flex items-baseline justify-end gap-2">
                 {hasSavings && (
                   <span className="text-base text-brand-textMuted line-through font-medium">
@@ -140,7 +129,6 @@ export function ReviewPanel({ allProducts }: ReviewPanelProps) {
             </div>
           </div>
 
-          {/* Savings Alert */}
           {hasSavings && (
             <p className="text-center text-xs font-semibold text-brand-success py-1 mb-2">
               Congrats! You're saving ${savings.toFixed(2)} on your security
@@ -148,7 +136,6 @@ export function ReviewPanel({ allProducts }: ReviewPanelProps) {
             </p>
           )}
 
-          {/* Checkout Section */}
           <div className="space-y-1">
             <button className="w-full bg-brand-primary text-white font-black py-4 rounded shadow-lg shadow-indigo-600/20 hover:bg-brand-primaryHover active:scale-[0.99] transition-all text-sm text-center cursor-pointer">
               Checkout

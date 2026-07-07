@@ -27,7 +27,7 @@ export function AccessoriesGrid() {
               imageUrl={product.mainImage || undefined}
               quantity={currentQty}
               price={product.price}
-              compareAtPrice={product.compareAt} // Calculate similarly to price
+              compareAtPrice={product.compareAt}
               isHighlighted={currentQty > 0}
               onQuantityChange={(delta) =>
                 updateQuantity(product.id, product.id, delta, product.category)

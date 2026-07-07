@@ -24,7 +24,6 @@ export function AccordionStep({
 }: AccordionStepProps) {
   return (
     <div className="overflow-hidden rounded">
-      {/* Header */}
       <span
         className={`text-xs tracking-wider  text-brand-textMuted uppercase block px-5 pb-1 pt-0 md:py-2 ${isOpen && "md:bg-brand-secondary"}`}
       >
@@ -55,10 +54,7 @@ export function AccordionStep({
         </div>
       </div>
 
-      {/* Expanded Content Box */}
-      {isOpen && (
-        <div className="bg-brand-secondary p-2">{children}</div>
-      )}
+      {isOpen && <div className="bg-brand-secondary p-2">{children}</div>}
     </div>
   );
 }

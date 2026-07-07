@@ -12,15 +12,25 @@ export function PlanSelection() {
   );
 
   const handleSelectPlan = (productId: string) => {
-    // 1. If we are clicking the one already selected, remove it (Toggle Off)
+    // 1. Toggle Off
     if (currentActivePlanItem?.productId === productId) {
-      updateQuantity(productId, productId, -currentActivePlanItem.quantity, "plan");
+      updateQuantity(
+        productId,
+        productId,
+        -currentActivePlanItem.quantity,
+        "plan",
+      );
       return;
     }
 
     // 2. If a different plan is selected, remove it first
     if (currentActivePlanItem) {
-      updateQuantity(currentActivePlanItem.productId, currentActivePlanItem.productId, -currentActivePlanItem.quantity, "plan");
+      updateQuantity(
+        currentActivePlanItem.productId,
+        currentActivePlanItem.productId,
+        -currentActivePlanItem.quantity,
+        "plan",
+      );
     }
 
     // 3. Select the new one
@@ -28,7 +38,11 @@ export function PlanSelection() {
   };
 
   if (!plans.length) {
-    return <div className="p-4 text-center text-brand-primary text-sm font-bold">No plans for now...</div>;
+    return (
+      <div className="p-4 text-center text-brand-primary text-sm font-bold">
+        No plans for now...
+      </div>
+    );
   }
 
   return (
@@ -48,23 +62,26 @@ export function PlanSelection() {
               }`}
             >
               <div className="flex gap-4 items-start">
-                {/* Product Image */}
                 {product.mainImage && (
-                  <img 
-                    src={product.mainImage} 
-                    alt={product.title} 
-                    className="w-10 h-10 object-contain rounded-lg bg-white p-1 border border-slate-100" 
+                  <img
+                    src={product.mainImage}
+                    alt={product.title}
+                    className="w-10 h-10 object-contain rounded-lg bg-white p-1 border border-slate-100"
                   />
                 )}
-                
+
                 <div className="flex-1">
                   <div className="flex justify-between items-start">
                     <h4 className="font-bold text-sm text-brand-textMain">
                       {product.title}
                     </h4>
-                    <div className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${
-                        isSelected ? "bg-brand-primary border-brand-primary text-white" : "border-slate-300"
-                    }`}>
+                    <div
+                      className={`w-5 h-5 rounded-full border flex items-center justify-center transition-all ${
+                        isSelected
+                          ? "bg-brand-primary border-brand-primary text-white"
+                          : "border-slate-300"
+                      }`}
+                    >
                       {isSelected && <Check className="w-3 h-3 stroke-3" />}
                     </div>
                   </div>

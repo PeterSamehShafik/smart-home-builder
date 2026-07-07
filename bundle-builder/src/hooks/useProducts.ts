@@ -39,7 +39,6 @@ export function useAllProducts() {
   const s = useSensors();
   const a = useAccessories();
 
-  // Use logical OR fallback for the data property specifically
   const data = [
     ...(c.data ?? []),
     ...(p.data ?? []),
