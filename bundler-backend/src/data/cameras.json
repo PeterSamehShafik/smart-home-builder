@@ -83,23 +83,6 @@
     ]
   },
   {
-    "id": "test",
-    "category": "cameras",
-    "title": "test",
-    "description": "Two cameras. Two views. Double the porch protection.",
-    "badge": null,
-    "variants": [
-      {
-        "id": "test",
-        "label": "Default",
-        "price": 69.98,
-        "compareAt": null,
-        "thumbnailImage": "",
-        "heroImage": ""
-      }
-    ]
-  },
-  {
     "id": "wyze_duo_cam_doorbell",
     "category": "cameras",
     "title": "Wyze Duo Cam Doorbell",
