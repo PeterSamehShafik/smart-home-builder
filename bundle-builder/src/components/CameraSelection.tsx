@@ -43,7 +43,7 @@ export function CameraSelection() {
             imageUrl={displayHeroImage}
             quantity={currentVariantQuantity}
             price={price}
-            compareAtPrice={compareAtPrice} 
+            compareAtPrice={compareAtPrice}
             isHighlighted={isAnyVariantInCart}
             activeVariantId={activeVariantId}
             onVariantChange={(vId) => setActiveVariant(product.id, vId)}

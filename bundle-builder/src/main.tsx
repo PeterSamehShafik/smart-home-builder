@@ -5,12 +5,15 @@ import "./app.css";
 import App from "./App.tsx";
 import { AppProvider } from "./providers/AppProvider.tsx";
 import { Navbar } from "./components/shared/Navbar.tsx";
+import { ErrorBoundary } from "./components/shared/ErrorBoundry.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AppProvider>
       <Navbar />
-      <App />
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
     </AppProvider>
   </StrictMode>,
 );

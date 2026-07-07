@@ -41,7 +41,7 @@ export const useCheckoutStore = create<CheckoutState>()(
         set((state) => {
           const current = state.cart[variantId] || {
             productId,
-            variantId,
+            variantId, //productId for non-variants products
             quantity: 0,
             category,
           };

@@ -1,4 +1,3 @@
-// 1. Base properties
 export interface BaseProduct {
   id: string;
   title: string;
@@ -6,7 +5,6 @@ export interface BaseProduct {
   badge: string | null;
 }
 
-// 2. Camera-specific structures
 export interface CameraVariant {
   id: string;
   label: string;
@@ -21,7 +19,6 @@ export interface CameraProduct extends BaseProduct {
   variants: CameraVariant[];
 }
 
-// 3. Standard Product structure (Sensors, Accessories, Plan)
 export interface StandardProduct extends BaseProduct {
   category: "sensors" | "accessories" | "plan";
   mainImage: string | null;
@@ -29,27 +26,22 @@ export interface StandardProduct extends BaseProduct {
   compareAt: number | null;
 }
 
-// 4. The combined Product type
 export type Product = CameraProduct | StandardProduct;
 
-// 5. The Cart Item type
-// By explicitly separating these, you gain better autocompletion
-// and prevent undefined errors when accessing variant data.
 export interface CartItem {
   productId: string;
-  variantId: string; // We use productId as variantId for non-cameras
+  variantId: string;
   quantity: number;
   category: Product["category"];
 }
 
 export interface SummaryItem extends CartItem {
   product: Product;
-  variant: CameraVariant | null; // Null for standard products
+  variant: CameraVariant | null;
   totalPrice: number;
   compareAtPrice: number;
 }
 
-// 6. API Response
 export interface ApiResponse<T> {
   data: T;
   message?: string;
