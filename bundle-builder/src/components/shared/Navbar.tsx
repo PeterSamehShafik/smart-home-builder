@@ -5,7 +5,7 @@ import { useThemeStore } from "@/stores/themeStore";
 export function Navbar() {
   const { isDark, toggleTheme } = useThemeStore();
   return (
-    <nav className="bg-brand-surface border-b border-brand-border px-6 py-4 flex justify-between items-center">
+    <nav className="bg-brand-header border-b border-brand-border px-6 py-4 flex justify-between items-center">
       <img src={icon} alt="Logo" className="w-8" />
 
       <button

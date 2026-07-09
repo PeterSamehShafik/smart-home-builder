@@ -10,6 +10,7 @@ import { useCheckoutSummary } from "@/hooks/useCheckoutSummary";
 import NextStepButton from "./components/shared/NextStepButton";
 import { useAllProducts } from "./hooks/useProducts";
 import type { SummaryItem } from "./types/api.types";
+import { SkeletonLoader } from "./components/shared/SkeletonLoader";
 
 export default function App() {
   const activeStep = useCheckoutStore((state) => state.activeStep);
@@ -30,11 +31,7 @@ export default function App() {
   };
 
   if (isLoading) {
-    return (
-      <div className="min-h-screen bg-brand-bg flex items-center justify-center font-bold text-brand-primary">
-        Loading your security system...
-      </div>
-    );
+    return <SkeletonLoader />;
   }
 
   return (
