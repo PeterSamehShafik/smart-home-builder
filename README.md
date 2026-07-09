@@ -1,5 +1,7 @@
 # Security Bundle Builder
 
+🔗 **[Live Demo](https://smart-home-builder-fe.vercel.app/)**
+
 A multi-step, data-driven bundle builder for a home-security system, with a live review panel and a persisted cart — built as a frontend take-home.
 
 ## Tech stack
